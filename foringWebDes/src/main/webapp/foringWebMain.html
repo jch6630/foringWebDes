@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Main Page</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat"
+	rel="stylesheet">
+<link rel="stylesheet" href="./css/foringCss.css">
+<style type="text/css">
+@-ms-viewport {
+	width: device-width;
+}
+
+@-o-viewport {
+	width: device-width;
+}
+
+@viewport {
+	width: device-width;
+}
+</style>
+<script type="text/javascript"
+	src="https://use.fontawesome.com/926fe18a63.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(function() {
+			$(".main_hamButton").click(function() {
+				$(".mainmenu").slideToggle();
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<header>
+		<section class="hbody">
+			<article class="mainbar">
+				<div class="logo">
+					<a href="#"><img class="logoimg" src="images/foringWebLogo.png" /></a>
+				</div>
+				<div class="mainbarspace"></div>
+				<button type="button" class="main_hamButton">
+					<span class="fa fa-bars" title=""></span>
+				</button>
+				<div class="mainmenu">
+					<ul class="menu">
+						<li class="mainmenucon"><a href="#">게시판</a></li>
+						<div id="heightline"></div>
+						<li class="mainmenucon"><a href="#">이력서</a></li>
+						<div id="heightline"></div>
+						<li class="mainmenucon"><a href="#">MyPage</a></li>
+					</ul>
+				</div>
+				<div class="login">
+					<button type="button" class="loginbutton">
+						<span class="logintext" title="LOGIN">LOGIN</span>
+					</button>
+				</div>
+				<div class="join">
+					<button type="button" class="joinbutton">
+						<span class="jointext" title="JOIN">JOIN</span>
+					</button>
+				</div>
+			</article>
+		</section>
+	</header>
+
+	<section class="body">
+
+		<div class="searchbox">
+			<input type="text" id="searchbox"
+				placeholder="&nbsp&nbsp&nbsp관심있는 내용을 입력해주세요.">
+		</div>
+		<div class="succresume">
+			<ul class="succresumelist">
+				<li class="succresumelisttitle">합격자소서</li>
+				<li>
+					<hr class="succresumelistline">
+					<div>
+						<a href="#" class="succresumelink">
+							<ul class="succresumelistkind">
+								<li>자소서 제목</li>
+								<hr>
+								<li>합격 및 지원 회사</li>
+								<hr>
+								<li>연봉정보</li>
+								<hr>
+								<li>판매여부/판매가격</li>
+								<hr>
+								<li>판매자 닉네임</li>
+							</ul>
+						</a>
+					</div>
+				</li>
+				<li>
+					<hr class="succresumelistline">
+					<div>
+						<a href="#" class="succresumelink">
+							<ul class="succresumelistkind">
+								<li>자소서 제목</li>
+								<hr>
+								<li>합격 및 지원 회사</li>
+								<hr>
+								<li>연봉정보</li>
+								<hr>
+								<li>판매여부/판매가격</li>
+								<hr>
+								<li>판매자 닉네임</li>
+							</ul>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="hotboard">
+			<table border="1" class="hotboardtable">
+				<tr>
+					<td colspan="4"><img src="images/hoticon.png" class="hoticon"
+						style="vertical-align: middle;" /> <span class="hotboardtitle"
+						style="vertical-align: middle;"><strong>핫 게시판</strong></span>
+
+						<hr></td>
+				</tr>
+				<tr>
+					<td><span class="category">카테고리</span></td>
+					<td><a href="#" class="hotboardname">게시물 제목</a></td>
+					<td><span><img class="likeimg" src="images/like.png" /></span></td>
+					<td><span><img class="commentimg"
+							src="images/comment.png" /></span></td>
+				</tr>
+				<tr>
+					<td><span class="category">카테고리</span></td>
+					<td><a href="#" class="hotboardname">게시물 제목</a></td>
+					<td><span><img class="likeimg" src="images/like.png" /></span></td>
+					<td><span><img class="commentimg"
+							src="images/comment.png" /></span></td>
+				</tr>
+				<tr>
+					<td><span class="category">카테고리</span></td>
+					<td><a href="#" class="hotboardname">게시물 제목</a></td>
+					<td><span><img class="likeimg" src="images/like.png" /></span></td>
+					<td><span><img class="commentimg"
+							src="images/comment.png" /></span></td>
+				</tr>
+				<tr>
+					<td><span class="category">카테고리</span></td>
+					<td><a href="#" class="hotboardname">게시물 제목</a></td>
+					<td><span><img class="likeimg" src="images/like.png" /></span></td>
+					<td><span><img class="commentimg"
+							src="images/comment.png" /></span></td>
+				</tr>
+				<tr>
+					<td><span class="category">카테고리</span></td>
+					<td><a href="#" class="hotboardname">게시물 제목</a></td>
+					<td><span><img class="likeimg" src="images/like.png" /></span></td>
+					<td><span><img class="commentimg"
+							src="images/comment.png" /></span></td>
+				</tr>
+				<tr>
+					<td><span class="category">카테고리</span></td>
+					<td><a href="#" class="hotboardname">게시물 제목</a></td>
+					<td><span><img class="likeimg" src="images/like.png" /></span></td>
+					<td><span><img class="commentimg"
+							src="images/comment.png" /></span></td>
+				</tr>
+				<tr>
+					<td><span class="category">카테고리</span></td>
+					<td><a href="#" class="hotboardname">게시물 제목</a></td>
+					<td><span><img class="likeimg" src="images/like.png" /></span></td>
+					<td><span><img class="commentimg"
+							src="images/comment.png" /></span></td>
+				</tr>
+				<tr>
+					<td><span class="category">카테고리</span></td>
+					<td><a href="#" class="hotboardname">게시물 제목</a></td>
+					<td><span><img class="likeimg" src="images/like.png" /></span></td>
+					<td><span><img class="commentimg"
+							src="images/comment.png" /></span></td>
+				</tr>
+				<tr>
+					<td><span class="category">카테고리</span></td>
+					<td><a href="#" class="hotboardname">게시물 제목</a></td>
+					<td><span><img class="likeimg" src="images/like.png" /></span></td>
+					<td><span><img class="commentimg"
+							src="images/comment.png" /></span></td>
+				</tr>
+				<tr>
+					<td><span class="category">카테고리</span></td>
+					<td><a href="#" class="hotboardname">게시물 제목</a></td>
+					<td><span><img class="likeimg" src="images/like.png" /></span></td>
+					<td><span><img class="commentimg"
+							src="images/comment.png" /></span></td>
+				</tr>
+			</table>
+		</div>
+		<div class="mainchat"></div>
+
+	</section>
+
+	<!-- footer -->
+	<footer> </footer>
+
+</body>
+</html>
