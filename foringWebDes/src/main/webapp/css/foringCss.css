@@ -87,6 +87,7 @@ header{
 	border-radius : 10px;
 	margin: 3.5px auto;
 	background-color: white;
+	cursor: pointer;
 }
 .logintext{
 	line-height:22px;
@@ -113,6 +114,7 @@ header{
 	border-radius : 10px;
 	margin: 3.5px auto;
 	background-color: white;
+	cursor: pointer;
 }
 .jointext{
 	line-height:22px;
@@ -183,6 +185,8 @@ header{
 	top: 30px;
 	left: 80%;
 	text-align: center;
+	border: 1px dashed gray;
+	border-top: 2px solid black;
 }
 .succresumelistline {
 /* 	color: black; */
@@ -205,16 +209,17 @@ header{
 	margin-bottom: 10px;
 	width: 80%;
 	height:250px;
-	border: 1px solid blue;
+	border: 1px solid #A9E2F3;
 }
 .succresumelink>ul>li {
+	color:black;
 	line-height: 50px;
-	font-size: 80%;
+	font-size: 100%;
 }
 /* /////////////////////////// */
 /* 인기게시판 */
 .hotboard{
-	background-color: blue;
+	background-color: #A9E2F3;
 	width: 76%;
 	height: 490px;
 	position: absolute;
@@ -313,12 +318,49 @@ header{
 /* /////////////////////////// */
 /* 메인페이지 채팅 창 */
 .mainchat{
-	background-color: green;
+	background-color:none;
 	width: 96%;
 	height: 520px;
 	position: absolute;
 	top: 640px;
 	left: 2%;
+}
+.mainchatbox {
+	margin-left:0.2%;
+	width: 98%;
+	height:480px;
+	border: 10px solid #2E9AFE;
+	border-radius: 20px;
+	background-color: #A9E2F3;
+}
+#chattingbox{
+	
+    border: 1px solid #ccc;
+	border-radius: 10px;
+	
+    padding: 5px 5px;
+    text-indent: 30px;
+    text-align: left;
+    width: 120px;
+    
+	color: black;
+	border: none;
+	outline: none;
+	width: 96%;
+	height: 20px;
+	font-size: 18px;
+	background-color:white;
+	position: absolute;
+	top: 455px;
+	left: 1.8%;
+}
+#chattingbox::placeholder{
+	background-image: url(../images/readingglasses.png);
+    background-position: 13px center;
+    background-size: contain;
+    background-repeat: no-repeat;
+	
+	color: #E6E6E6;
 }
 /* /////////////////////////// */
 /* /////////////////////////// */
