@@ -1,10 +1,164 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-</head>
-<body>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Page</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat"
+	rel="stylesheet">
+<link rel="stylesheet" href="./css/join.css">
+<style type="text/css">
+@-ms-viewport {
+	width: device-width;
+}
 
+@-o-viewport {
+	width: device-width;
+}
+
+@viewport {
+	width: device-width;
+}
+</style>
+<script type="text/javascript"
+	src="https://use.fontawesome.com/926fe18a63.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(function() {
+			$(".main_hamButton").click(function() {
+				$(".mainmenu").slideToggle();
+			});
+		});
+	});
+</script>
+</head>
+	<div class="background">
+		<img class="backimg" src="images/loginjoinbackimg.png" />
+		<img class="joinlogo" src="images/foringloginlogo.png" />
+		<div class="joinbackbox">
+			<div class="jointext">
+				<h1><strong>회원가입</strong></h1>
+			</div>
+			<div class="termsdiv">
+				<form action="#" name="termsform" class="termsform">
+					<table class="termstable">
+						<tr>
+							<td>
+								필수동의 항목 및 개인정보 수집 및 이용 동의(선택), <br>광고성 정보 수신(선택)에 모두 동의합니다.
+							</td>
+							<td><input type="checkbox"></input></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<hr class="alltermscheck">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="essentialcheck">[필수]</span> 만 15세 이상입니다.
+							</td>
+							<td><input type="checkbox"></input></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+							<hr>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="essentialcheck">[필수]</span> 이용약관 동의
+							</td>
+							<td><input type="checkbox"></input></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+							<hr>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="essentialcheck">[필수]</span> 개인정보 수집 및 이용동의
+							</td>
+							<td><input type="checkbox"></input></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<hr>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>[선택]</span> 개인정보 수집 및 이용동의
+							</td>
+							<td><input type="checkbox"></input></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+							<hr>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>[선택]</span> 광고성 정보 이메일 수신 동의
+							</td>
+							<td><input type="checkbox"></input></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+							<hr>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>[선택]</span> 광고성 정보 SMS수신 동의
+							</td>
+							<td><input type="checkbox"></input></td>
+						</tr>
+					</table>
+					
+				</form>
+			</div>
+			<div class="joinheightline"></div>
+			<div class="joinbox">
+			   <form action="#" name="joinpage" class="joinform"> <!-- <form action="백엔드 서버 주소" method="get or post"> -->
+			      <strong>아이디 : </strong>       <input type="text" name="irum" id="irum" value="">&nbsp;
+			               <button type="button" onclick="idchk();">중복확인</button><br>
+			      <strong>비밀번호 : </strong>       <input type="password" name="pw" id="pw" value="" onkeyup='pwchk();' placeholder="영문자+숫자+특수문자 조합" maxlength="16">
+			               <span style="color: red" id ="pwMsg"></span><br>
+			      <strong>비밀번호 재확인 : </strong>    <input type="password" name="repw" id="repw" value="" onkeyup='repwchk();'>
+			               <span style="color: red" id ="repwMsg"></span><br>
+			      <strong>이름 : </strong>          <input type="text" name="name" id="name" value=""><br>
+			      <strong>생년월일 : </strong>       <input type="date" min="2020-01-01" max="2025-12-31" name="calen" id="calen" value=""><br>
+			      <strong>성별 : </strong>         <input type="radio" name="gender" value="f" checked="checked">여
+			                <input type="radio" name="gender" value="m">남<br>
+			      <strong>전화번호 : </strong>       <input type="text" name="tel" id="tel" value="" onkeyup='telchk();'>&nbsp;<span style="color: black" id ="telMsg">ex"-"없이 숫자만 입력</span><br>
+			      <strong>이메일 : </strong>       <input type="text" name="email" id="email" value="">
+			               &nbsp;@&nbsp;
+			               <input type="text" name="domain" id="domain" disabled="disabled" value="">&nbsp;
+			               <select name="domainSlt" onchange="domain_Slt();" id="domainSlt">
+			                  <option value="default">직접입력</option>
+			                  <option value="naver.com">naver.com</option>
+			                  <option value="daum.net">daum.net</option>
+			                  <option value="google.com">google.com</option>
+			               </select><br>
+			      <strong>우편번호 : </strong>      <input type="text" id="addrnum" placeholder="우편번호" disabled="disabled">&nbsp;
+			               <input type="text" name="addr" id="addr" placeholder="주소" disabled="disabled">&nbsp;
+			               <input type="text" name="detailaddr" id="detailaddr" placeholder="상세주소" disabled="disabled">&nbsp;
+			               <button type="button" id="addrsearch" onclick="kakaopostcode();">검색</button><br>
+<!-- 			      약관동의      <input type="checkbox" name="agree" id="agree">약관에 동의합니다.<br> -->
+			   </form>
+			</div>
+			<div class="lastbutton">
+				<button type="button" class="before">
+		         	이전 페이지
+		      	</button>
+		      	<button type="button" class="join" onclick="join();">
+		         	가 입 하 기
+		      	</button>
+		    </div>  
+		</div>
+	</div>
 </body>
 </html>
