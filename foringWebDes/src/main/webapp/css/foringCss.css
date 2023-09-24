@@ -216,6 +216,9 @@ header{
 	line-height: 50px;
 	font-size: 100%;
 }
+.succresumelistkind hr {
+	color: black;
+}
 /* /////////////////////////// */
 /* 인기게시판 */
 .hotboard{
@@ -313,6 +316,8 @@ header{
 }
 .hotboardname {
 	margin-left: 5%;
+	text-decoration: none;
+	color: black;
 }
 
 /* /////////////////////////// */
